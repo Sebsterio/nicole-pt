@@ -1,10 +1,17 @@
 // colors
 
 $colors: (
+	// deprecated
 	black: #070707,
 	white: #fff,
 	grey-dark: #6f6f6f,
 	grey-light: #b2b2b2,
+
+	// new
+	bg-dark: #f1f1f1,
+	bg-light: #d8ccb4,
+	on-dark: white,
+	on-light: black
 );
 
 @function color($color-name) {
