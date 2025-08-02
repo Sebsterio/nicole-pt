@@ -1,9 +1,10 @@
-@import "imports";
+@use "imports";
+@use "imports/abstracts";
 
 .intro {
 	position: relative;
 	background: transparent;
-	color: color(white);
+	color: abstracts.color(white);
 
 	// tilted background
 	&:after {
@@ -11,7 +12,7 @@
 		bottom: 0;
 		transform-origin: 50% 100%;
 
-		@include tablet {
+		@include abstracts.tablet {
 			transform: translateX(-33.3%) rotate(-14deg);
 		}
 	}
@@ -23,13 +24,13 @@
 	grid-gap: 30px;
 	grid-template-areas: "pic" "text"; // == implicit
 
-	@include tablet {
+	@include abstracts.tablet {
 		padding: 25px;
 		grid-template-columns: 1fr auto;
 		grid-template-areas: "text pic";
 	}
 
-	@include desktop {
+	@include abstracts.desktop {
 		padding: 50px;
 		padding-bottom: 0;
 	}
@@ -51,7 +52,7 @@
 		background-size: 90%;
 		background-position: 50% 0;
 
-		@include tablet {
+		@include abstracts.tablet {
 			width: 35vw;
 			height: 30vw;
 			min-width: 250px;
@@ -70,7 +71,7 @@
 			text-transform: initial;
 			font-weight: 300;
 
-			@include mobile {
+			@include abstracts.mobile {
 				font-size: 50px; // override
 			}
 		}
@@ -78,7 +79,7 @@
 			justify-self: right;
 			margin: 15px 45px 0 0;
 
-			@include tablet {
+			@include abstracts.tablet {
 				justify-self: left;
 				margin: 15px 0 0 80px;
 			}

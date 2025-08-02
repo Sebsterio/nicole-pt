@@ -1,15 +1,17 @@
-@import "imports";
+@use "imports";
+@use "imports/abstracts";
+@use "imports/backgrounds";
 
 .landing {
 	.bg {
 		height: 70vh;
-		background: rgb(36, 36, 36) $image-landing;
+		background: rgb(36, 36, 36) backgrounds.$image-landing;
 		background-size: auto 100%;
 		background-position: 65% 0;
 		background-repeat: no-repeat;
 		margin-bottom: -150px;
 
-		@include tablet {
+		@include abstracts.tablet {
 			background-size: auto 70%; // de facto 100%; dunno why...
 			background-attachment: fixed;
 			height: 100vh;
@@ -26,10 +28,10 @@
 			width: 100%;
 			height: 150px;
 			bottom: 85px; // de facto 0; no idea why...
-			background: linear-gradient(rgba(0, 0, 0, 0), color(black));
+			background: linear-gradient(rgba(0, 0, 0, 0), abstracts.color(black));
 			z-index: 0;
 
-			@include tablet {
+			@include abstracts.tablet {
 				bottom: 0;
 			}
 		}
@@ -43,13 +45,13 @@
 		align-items: flex-start;
 		left: 20px;
 
-		@include tablet {
+		@include abstracts.tablet {
 			position: absolute;
 			left: 3vh;
 			bottom: 15vh;
 		}
 
-		@include desktop {
+		@include abstracts.desktop {
 			left: 10vh;
 		}
 	}

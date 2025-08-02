@@ -1,17 +1,19 @@
-@import "imports";
+@use "imports";
+@use "imports/abstracts";
+@use "imports/backgrounds";
 
 .consultation {
 	z-index: 0;
-	background: #edebee $image-consultation;
+	background: #edebee backgrounds.$image-consultation;
 	background-size: cover;
 	background-position: 57% 50%;
 	padding: 80px 15px;
 
-	@include tablet {
+	@include abstracts.tablet {
 		background-attachment: fixed;
 	}
 
-	@include desktop {
+	@include abstracts.desktop {
 		padding: 100px 0 120px 0;
 	}
 
@@ -23,20 +25,20 @@
 		text-align: center;
 		grid-gap: 15px;
 
-		@include tablet {
+		@include abstracts.tablet {
 			padding: 30px;
 		}
-		@include laptop {
-			width: $laptop;
+		@include abstracts.laptop {
+			width: abstracts.$laptop;
 			padding: 50px;
 			grid-gap: 30px;
 		}
-		@include desktop {
-			width: $desktop;
+		@include abstracts.desktop {
+			width: abstracts.$desktop;
 		}
 
 		.superscript {
-			color: color(grey-dark);
+			color: abstracts.color(grey-dark);
 		}
 
 		form {
@@ -44,7 +46,7 @@
 			display: grid;
 			grid-gap: 5px;
 
-			@include laptop {
+			@include abstracts.laptop {
 				grid-template-columns: 1fr 1fr 1fr auto;
 			}
 
@@ -57,7 +59,7 @@
 				padding: 4px 10px;
 				margin-top: 15px;
 
-				@include laptop {
+				@include abstracts.laptop {
 					padding: 0 14px;
 					margin-top: 0;
 				}
@@ -74,7 +76,7 @@
 		left: 0;
 		width: 100%;
 		height: 100px;
-		background: linear-gradient(rgba(0, 0, 0, 0), color(white));
+		background: linear-gradient(rgba(0, 0, 0, 0), abstracts.color(white));
 		z-index: 0;
 	}
 }

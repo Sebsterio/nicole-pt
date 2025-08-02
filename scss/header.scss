@@ -1,4 +1,5 @@
-@import "imports";
+@use "imports";
+@use "imports/abstracts";
 
 .main-header {
 	z-index: 9999;
@@ -9,13 +10,13 @@
 	align-items: center;
 	padding: 12px;
 	background-color: transparent;
-	color: color(white);
+	color: abstracts.color(white);
 	transition: background-color 400ms ease-in-out;
 
-	@include tablet {
+	@include abstracts.tablet {
 		padding: 14px;
 	}
-	@include desktop {
+	@include abstracts.desktop {
 		padding: 18px;
 	}
 
@@ -29,14 +30,14 @@
 			font-style: italic;
 			font-weight: 300;
 
-			@include mobile {
+			@include abstracts.mobile {
 				display: block;
 			}
 		}
 	}
 
 	.nav-toggle {
-		@include tablet {
+		@include abstracts.tablet {
 			display: none;
 		}
 		&:focus {
@@ -49,12 +50,12 @@
 
 	// if window.scrollY > 0;
 	&.detached {
-		background-color: color(black);
+		background-color: abstracts.color(black);
 	}
 }
 
 nav {
-	@include mobile {
+	@include abstracts.mobile {
 		display: none;
 	}
 
@@ -67,7 +68,7 @@ nav {
 			font-weight: 300;
 			margin-right: 2vw;
 
-			@include desktop {
+			@include abstracts.desktop {
 				font-size: 24px;
 				margin-right: 65px;
 			}
@@ -86,7 +87,7 @@ html.expanded {
 
 	.main-header {
 		transition: none;
-		background-color: color(black);
+		background-color: abstracts.color(black);
 		height: 100vh;
 		display: grid;
 		grid-template-columns: 1fr auto;

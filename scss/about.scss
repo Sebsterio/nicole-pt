@@ -1,4 +1,5 @@
-@import "imports";
+@use "imports";
+@use "imports/abstracts";
 
 .about {
 	&:after {
@@ -12,11 +13,11 @@
 		justify-items: center;
 		grid-gap: 15px;
 
-		@include tablet {
+		@include abstracts.tablet {
 			padding: 50px 30px;
 		}
 
-		@include laptop {
+		@include abstracts.laptop {
 			padding: 80px 50px 30px 50px;
 			grid-template-areas:
 				"title title"
@@ -24,7 +25,7 @@
 			grid-gap: 15px 30px;
 		}
 
-		@include desktop {
+		@include abstracts.desktop {
 			grid-gap: 30px;
 		}
 
@@ -47,7 +48,7 @@
 				text-align-last: right;
 				margin-right: 5vw;
 
-				@include laptop {
+				@include abstracts.laptop {
 					padding-top: 30px;
 					margin-bottom: -20px;
 				}
@@ -68,12 +69,12 @@
 
 			filter: blur(1px) opacity(40%);
 
-			@include tablet {
+			@include abstracts.tablet {
 				width: 60vw;
 				height: 50vw;
 			}
 
-			@include laptop {
+			@include abstracts.laptop {
 				// background: url("https://imgpile.com/images/IxrDBi.jpg");
 				// background-position: 70% 50%;
 				background: url("https://imgpile.com/images/5hn73X.jpg");
@@ -85,7 +86,7 @@
 				height: 50vw;
 			}
 
-			@include desktop {
+			@include abstracts.desktop {
 				width: 350px;
 				height: 580px;
 			}
