@@ -1,4 +1,5 @@
-@import "imports";
+@use "imports";
+@use "imports/abstracts";
 
 /* Contents:
 	* Doc (html, body)
@@ -9,8 +10,8 @@
 // ---------------------- Doc ----------------------
 
 html {
-	background-color: color(white);
-	color: color(black);
+	background-color: abstracts.color(white);
+	color: abstracts.color(black);
 	/* prettier-ignore */
 	font-family: "Segoe UI", 'Open Sans', Roboto, Helvetica,	Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-weight: 400;
@@ -26,23 +27,23 @@ body {
 // ----------------- Global modifiers ------------------
 
 .base {
-	color: color(black);
-	background-color: color(white);
+	color: abstracts.color(black);
+	background-color: abstracts.color(white);
 }
 
 .inverse {
-	color: color(white);
-	background-color: color(black);
+	color: abstracts.color(white);
+	background-color: abstracts.color(black);
 }
 
 .no-mobile {
-	@include mobile {
+	@include abstracts.mobile {
 		display: none !important;
 	}
 }
 
 .mobile-only {
-	@include tablet {
+	@include abstracts.tablet {
 		display: none !important;
 	}
 }
@@ -58,7 +59,7 @@ body {
 	--ssh1offset: -16px;
 	--ssh2offset: -10px;
 
-	@include tablet {
+	@include abstracts.tablet {
 		--h1: 60px;
 		--h2: 48px;
 		--ssh1: 18px;
@@ -66,7 +67,7 @@ body {
 		--ssh1offset: -20px;
 		--ssh2offset: -16px;
 	}
-	@include desktop {
+	@include abstracts.desktop {
 		--h1: 87px;
 		--h2: 60px;
 		--ssh1: 24px;
@@ -99,7 +100,7 @@ body {
 		margin: 26px 0;
 
 		&:first-child {
-			@include tablet {
+			@include abstracts.tablet {
 				text-indent: 3em;
 			}
 		}
