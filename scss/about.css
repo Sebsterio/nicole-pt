@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+.about:after {
+  z-index: -1 !important;
+}
+.about .container {
+  padding: 30px 15px;
+  display: grid;
+  grid-template-areas: "title" "text";
+  justify-items: center;
+  grid-gap: 15px;
+}
+@media all and (min-width: 600px) {
+  .about .container {
+    padding: 50px 30px;
+  }
+}
+@media all and (min-width: 950px) {
+  .about .container {
+    padding: 80px 50px 30px 50px;
+    grid-template-areas: "title title" "pic 	 text";
+    grid-gap: 15px 30px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .about .container {
+    grid-gap: 30px;
+  }
+}
+.about .container .title {
+  grid-area: title;
+  text-align: center;
+}
+.about .container .text {
+  grid-area: text;
+  z-index: 999;
+  padding-top: 15px;
+}
+.about .container .text .signature {
+  font-family: "Homemade Apple", cursive;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 29px;
+  text-shadow: none;
+  -moz-text-align-last: right;
+       text-align-last: right;
+  margin-right: 5vw;
+}
+@media all and (min-width: 950px) {
+  .about .container .text .signature {
+    padding-top: 30px;
+    margin-bottom: -20px;
+  }
+}
+.about .container .pic {
+  grid-area: text;
+  width: 90vw;
+  height: 120vw;
+  margin: auto;
+  -webkit-clip-path: polygon(0 0%, 100% 13%, 83% 89%, 17% 100%);
+          clip-path: polygon(0 0%, 100% 13%, 83% 89%, 17% 100%);
+  background: grey;
+  background: url("https://imgpile.com/images/ItvXFr.jpg");
+  background-position: 70% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(1px) opacity(40%);
+}
+@media all and (min-width: 600px) {
+  .about .container .pic {
+    width: 60vw;
+    height: 50vw;
+  }
+}
+@media all and (min-width: 950px) {
+  .about .container .pic {
+    background: url("https://imgpile.com/images/5hn73X.jpg");
+    background-position: 50% 0%;
+    background-size: cover;
+    grid-area: pic;
+    filter: none;
+    width: 30vw;
+    height: 50vw;
+  }
+}
+@media all and (min-width: 1200px) {
+  .about .container .pic {
+    width: 350px;
+    height: 580px;
+  }
+}/*# sourceMappingURL=about.css.map */

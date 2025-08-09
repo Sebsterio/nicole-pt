@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+.programmes .container {
+  padding: 50px 15px 60px 15px;
+  text-align: center;
+  grid-gap: 80px;
+}
+@media all and (min-width: 600px) {
+  .programmes .container {
+    padding: 100px 50px 80px 50px;
+  }
+}
+@media all and (min-width: 600px) {
+  .programmes .container .section-title {
+    transform: translateX(20%);
+  }
+}
+@media all and (min-width: 1200px) {
+  .programmes .container .section-title {
+    transform: translateX(40%);
+  }
+}
+
+.programme {
+  position: relative;
+  display: grid;
+  grid-gap: 50px;
+  grid-template-areas: "pic" "text";
+  justify-items: center;
+}
+@media all and (min-width: 600px) {
+  .programme {
+    grid-template-areas: "pic text";
+    grid-template-columns: 45fr 55fr;
+  }
+  .programme:nth-child(odd) {
+    grid-template-areas: "text pic";
+    grid-template-columns: 55fr 45fr;
+  }
+}
+@media all and (min-width: 1200px) {
+  .programme {
+    grid-gap: 80px;
+  }
+}
+.programme .pic {
+  grid-area: pic;
+  background: #000;
+  box-shadow: 0 0 10px #000;
+}
+.programme .pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.programme .text {
+  grid-area: text;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  grid-gap: 5px;
+}
+@media all and (min-width: 950px) {
+  .programme .text {
+    padding: 50px 0;
+    grid-gap: 30px;
+  }
+}
+.programme .text button {
+  margin-top: 15px;
+  justify-self: right;
+  transform: translateX(-20%);
+}/*# sourceMappingURL=programmes.css.map */

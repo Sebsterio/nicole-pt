@@ -193,7 +193,6 @@ section .container {
   position: relative;
   background: transparent;
   color: #fff;
-  margin-top: 150px;
 }
 .inverse-theme .superscript {
   color: #b2b2b2;
@@ -207,12 +206,12 @@ section .container {
   width: 300%;
   height: 200%;
   transform-origin: 50% 0;
-  transform: translateX(-16%) rotate(14deg);
+  transform: translateX(-33.3%) rotate(14deg);
   background: #070707;
 }
 @media all and (min-width: 600px) {
   .inverse-theme:after {
-    transform: translateX(-16%) rotate(8deg);
+    transform: translateX(-33.3%) rotate(8deg);
   }
 }
 
@@ -473,7 +472,8 @@ html.expanded .main-header nav ul li {
   width: 90vw;
   height: 78vw;
   margin: auto;
-  clip-path: polygon(0 0%, 100% 13%, 83% 89%, 17% 100%);
+  -webkit-clip-path: polygon(0 0%, 100% 13%, 83% 89%, 17% 100%);
+          clip-path: polygon(0 0%, 100% 13%, 83% 89%, 17% 100%);
   background: grey;
   background-repeat: no-repeat;
   background: url("https://imgpile.com/images/5hnU5h.jpg");
@@ -566,7 +566,8 @@ html.expanded .main-header nav ul li {
 .programme .pic img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .programme .text {
   grid-area: text;
@@ -587,9 +588,9 @@ html.expanded .main-header nav ul li {
   transform: translateX(-20%);
 }
 
-.content-wrapper {
-  background-color: #070707;
-  padding-bottom: 100px;
+#service {
+  height: 100%;
+  width: 100%;
 }
 
 .service .container {
@@ -662,7 +663,8 @@ html.expanded .main-header nav ul li {
   z-index: 1000;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   padding: 10px 10px 60px 10px;
   background: white;
   box-shadow: 0 0 10px #000;
@@ -795,7 +797,8 @@ html.expanded .main-header nav ul li {
   font-weight: 300;
   font-size: 29px;
   text-shadow: none;
-  text-align-last: right;
+  -moz-text-align-last: right;
+       text-align-last: right;
   margin-right: 5vw;
 }
 @media all and (min-width: 950px) {
@@ -809,7 +812,8 @@ html.expanded .main-header nav ul li {
   width: 90vw;
   height: 120vw;
   margin: auto;
-  clip-path: polygon(0 0%, 100% 13%, 83% 89%, 17% 100%);
+  -webkit-clip-path: polygon(0 0%, 100% 13%, 83% 89%, 17% 100%);
+          clip-path: polygon(0 0%, 100% 13%, 83% 89%, 17% 100%);
   background: grey;
   background: url("https://imgpile.com/images/ItvXFr.jpg");
   background-position: 70% 50%;
@@ -912,7 +916,8 @@ html.expanded .main-header nav ul li {
 .gallery figure img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: all 400ms ease;
 }
 .gallery figure figcaption {
@@ -1083,6 +1088,9 @@ html.expanded .main-header nav ul li {
   color: #fff;
   text-shadow: 0 2px 2px black;
 }
+.contact-form form input::-moz-placeholder, .contact-form form textarea::-moz-placeholder {
+  color: #b2b2b2;
+}
 .contact-form form input::placeholder,
 .contact-form form textarea::placeholder {
   color: #b2b2b2;
@@ -1139,6 +1147,4 @@ footer::before {
   top: -5px;
   background: linear-gradient(rgba(0, 0, 0, 0), #070707);
   z-index: 20;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=index.css.map */

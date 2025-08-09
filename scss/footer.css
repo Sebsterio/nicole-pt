@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+footer {
+  position: relative;
+  padding: 15px;
+  font-size: 14px;
+  color: #b2b2b2 !important;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+@media all and (max-width: 600px) {
+  footer {
+    padding: 30px;
+    flex-flow: column;
+  }
+  footer .divider {
+    display: none;
+  }
+}
+footer .line {
+  padding: 2px 0;
+}
+footer .divider {
+  flex: 1 1 0;
+  max-width: 80px;
+}
+footer a {
+  text-decoration: underline;
+}
+footer::before {
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background: linear-gradient(rgba(0, 0, 0, 0), #070707);
+  z-index: 20;
+}/*# sourceMappingURL=footer.css.map */
