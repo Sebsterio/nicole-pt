@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+/* Contents:
+	* Section
+		* Title
+		* Container
+		* Section theme
+	* Button
+	* Slogan 
+*/
+section {
+  position: relative;
+}
+section .title {
+  position: relative;
+  font-style: italic;
+  text-transform: uppercase;
+}
+section .title .word {
+  display: inline;
+  position: relative;
+}
+section .title .superscript {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+section .container {
+  display: grid;
+  justify-items: center;
+}
+@media all and (min-width: 1200px) {
+  section .container {
+    width: 1200px;
+    margin: auto;
+  }
+}
+
+.base-theme .superscript {
+  color: #6f6f6f;
+}
+.base-theme:after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  display: block;
+  width: 100%;
+  height: 200%;
+  top: -50%;
+  background: #fff;
+}
+
+.inverse-theme {
+  position: relative;
+  background: transparent;
+  color: #fff;
+}
+.inverse-theme .superscript {
+  color: #b2b2b2;
+}
+.inverse-theme:after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 200%;
+  transform-origin: 50% 0;
+  transform: translateX(-33.3%) rotate(14deg);
+  background: #070707;
+}
+@media all and (min-width: 600px) {
+  .inverse-theme:after {
+    transform: translateX(-33.3%) rotate(8deg);
+  }
+}
+
+.action {
+  justify-self: center;
+}
+.action a, .action[type=submit] {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 24px;
+  padding: 0 6px;
+}
+
+.slogan {
+  --slogan-h1: 58px;
+  --slogan-h2: 32px;
+  --padding-h1: 0 8px 6px 8px;
+  --padding-h2: 0 4px 3px 4px;
+}
+@media all and (min-width: 600px) {
+  .slogan {
+    --slogan-h1: 58px;
+    --padding-h1: 0 8px 6px 8px;
+    --slogan-h2: var(--slogan-h1);
+    --padding-h2: var(--padding-h1);
+  }
+}
+@media all and (min-width: 1200px) {
+  .slogan {
+    --slogan-h1: 76px;
+    --padding-h1: 0 12px 8px 12px;
+  }
+}
+.slogan h1,
+.slogan h2 {
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-style: normal;
+  box-shadow: 0 0 10px black;
+  margin-bottom: 10px;
+}
+.slogan h1 {
+  font-size: var(--slogan-h1);
+  line-height: var(--slogan-h1);
+  padding: var(--padding-h1);
+}
+.slogan h2 {
+  font-size: var(--slogan-h2);
+  line-height: var(--slogan-h2);
+  padding: var(--padding-h2);
+}
+.slogan .no-bg {
+  background-color: transparent;
+  box-shadow: none;
+  text-shadow: 0 0 10px black;
+}/*# sourceMappingURL=components.css.map */

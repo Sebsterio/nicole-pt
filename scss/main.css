@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+/* Contents:
+	* Doc (html, body)
+	* Global modifiers (e.g. 'no-mobile')
+	* Font sizes
+*/
+html {
+  background-color: #fff;
+  color: #070707;
+  /* prettier-ignore */
+  font-family: "Segoe UI", "Open Sans", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  font-size: 18px;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  overflow-x: hidden;
+}
+
+body {
+  overflow: hidden;
+}
+
+.base {
+  color: #070707;
+  background-color: #fff;
+}
+
+.inverse {
+  color: #fff;
+  background-color: #070707;
+}
+
+@media all and (max-width: 600px) {
+  .no-mobile {
+    display: none !important;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+body {
+  --h1: 48px;
+  --h2: 36px;
+  --ssh1: 13px;
+  --ssh2: 11px;
+  --ssh1offset: -16px;
+  --ssh2offset: -10px;
+}
+@media all and (min-width: 600px) {
+  body {
+    --h1: 60px;
+    --h2: 48px;
+    --ssh1: 18px;
+    --ssh2: 13px;
+    --ssh1offset: -20px;
+    --ssh2offset: -16px;
+  }
+}
+@media all and (min-width: 1200px) {
+  body {
+    --h1: 87px;
+    --h2: 60px;
+    --ssh1: 24px;
+    --ssh2: 18px;
+    --ssh1offset: -28px;
+    --ssh2offset: -20px;
+  }
+}
+body h1 {
+  font-size: var(--h1);
+}
+body h1 .superscript {
+  font-size: var(--ssh1);
+  transform: translate(var(--ssh1offset), -50%);
+}
+body h2 {
+  font-size: var(--h2);
+}
+body h2 .superscript {
+  font-size: var(--ssh2);
+  transform: translate(var(--ssh2offset), -70%);
+}
+body p {
+  font-size: 18px;
+  line-height: 28px;
+  margin: 26px 0;
+}
+@media all and (min-width: 600px) {
+  body p:first-child {
+    text-indent: 3em;
+  }
+}/*# sourceMappingURL=main.css.map */

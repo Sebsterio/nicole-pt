@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+.main-header {
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: transparent;
+  color: #fff;
+  transition: background-color 400ms ease-in-out;
+}
+@media all and (min-width: 600px) {
+  .main-header {
+    padding: 14px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .main-header {
+    padding: 18px;
+  }
+}
+.main-header .title {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.main-header .title .subtitle {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+}
+@media all and (max-width: 600px) {
+  .main-header .title .subtitle {
+    display: block;
+  }
+}
+@media all and (min-width: 600px) {
+  .main-header .nav-toggle {
+    display: none;
+  }
+}
+.main-header .nav-toggle:focus {
+  outline: none;
+}
+.main-header .nav-toggle:active {
+  transform: scale(1.1);
+}
+.main-header.detached {
+  background-color: #070707;
+}
+
+@media all and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul li {
+  font-size: 19px;
+  font-weight: 300;
+  margin-right: 2vw;
+}
+@media all and (min-width: 1200px) {
+  nav ul li {
+    font-size: 24px;
+    margin-right: 65px;
+  }
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+html.expanded {
+  overflow: hidden;
+}
+html.expanded .main-header {
+  transition: none;
+  background-color: #070707;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  align-items: stretch;
+  justify-items: stretch;
+}
+html.expanded .main-header nav {
+  display: initial;
+  grid-column: 1/-1;
+}
+html.expanded .main-header nav ul {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+html.expanded .main-header nav ul li {
+  flex: 1 1 0;
+  font-size: 48px;
+  max-height: 100px;
+}/*# sourceMappingURL=header.css.map */
