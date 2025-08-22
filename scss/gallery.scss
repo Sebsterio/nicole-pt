@@ -1,20 +1,21 @@
-@import "imports";
+@use "imports";
+@use "imports/abstracts";
 
 .gallery {
 	// tilted bg is too narrow for expanded gallery view
-	background: linear-gradient(180deg, transparent 20%, color(black) 20%);
+	background: linear-gradient(180deg, transparent 20%, abstracts.color(black) 20%);
 
 	.container {
 		padding: 50px 15px 0 15px;
 		grid-gap: 30px;
 
-		@include tablet {
+		@include abstracts.tablet {
 			justify-items: left;
 			padding: 50px 30px 0 30px;
 			grid-gap: 50px;
 		}
 
-		@include desktop {
+		@include abstracts.desktop {
 			padding: 50px 50px 0 50px;
 		}
 	}
@@ -22,10 +23,10 @@
 	.title {
 		text-align: center;
 
-		@include tablet {
+		@include abstracts.tablet {
 			margin-left: 30px;
 		}
-		@include desktop {
+		@include abstracts.desktop {
 			margin-left: 0;
 		}
 	}
@@ -41,7 +42,7 @@
 		justify-content: center;
 		grid-gap: 15px;
 
-		@include tablet {
+		@include abstracts.tablet {
 			grid-template-columns: repeat(auto-fill, 300px);
 			grid-auto-rows: 300px 300px;
 		}
@@ -54,7 +55,7 @@
 			width: 100%;
 			bottom: 0;
 			height: 100px;
-			background: linear-gradient(180deg, transparent, color(black));
+			background: linear-gradient(180deg, transparent, abstracts.color(black));
 		}
 
 		&.open {

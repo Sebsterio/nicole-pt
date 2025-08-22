@@ -1,19 +1,20 @@
-@import "imports";
+@use "imports";
+@use "imports/abstracts";
 
 .programmes .container {
 	padding: 50px 15px 60px 15px;
 	text-align: center;
 	grid-gap: 80px;
 
-	@include tablet {
+	@include abstracts.tablet {
 		padding: 100px 50px 80px 50px;
 	}
 
 	.section-title {
-		@include tablet {
+		@include abstracts.tablet {
 			transform: translateX(20%);
 		}
-		@include desktop {
+		@include abstracts.desktop {
 			transform: translateX(40%);
 		}
 	}
@@ -26,7 +27,7 @@
 	grid-template-areas: "pic" "text";
 	justify-items: center;
 
-	@include tablet {
+	@include abstracts.tablet {
 		grid-template-areas: "pic text";
 		grid-template-columns: 45fr 55fr;
 
@@ -36,7 +37,7 @@
 		}
 	}
 
-	@include desktop {
+	@include abstracts.desktop {
 		grid-gap: 80px;
 	}
 
@@ -59,7 +60,7 @@
 		justify-items: center;
 		grid-gap: 5px;
 
-		@include laptop {
+		@include abstracts.laptop {
 			padding: 50px 0;
 			grid-gap: 30px;
 		}
